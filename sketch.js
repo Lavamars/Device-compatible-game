@@ -122,9 +122,9 @@ function createCash() {
 function createDiamonds() {
   if (World.frameCount % 320 == 0) {
        // Modify the positions of diamonds 
-
        var diamonds = createSprite(width+100,height-300, 10, 10);
        diamonds.x=Math.round(random(50, width-20))
+       diamonds.addImage(diamondsImg)
   diamonds.scale=0.03;
   diamonds.velocityY = 5;
   diamonds.lifetime = 200;
@@ -138,6 +138,7 @@ function createJwellery() {
 
     var jwellery = createSprite(width+100,height-300, 10, 10);
     jwellery.x=Math.round(random(50, width-20))
+    jwellery.addImage(jwelleryImg)
   jwellery.scale=0.13;
   jwellery.velocityY = 5;
   jwellery.lifetime = 200;
@@ -151,6 +152,7 @@ function createSword(){
 
     var sword = createSprite(width+100,height-300, 10, 10);
     sword.x=Math.round(random(50, width-20));
+    sword.addImage(swordImg)
   sword.scale=0.1;
   sword.velocityY = 4;
   sword.lifetime = 200;
